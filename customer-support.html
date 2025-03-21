@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support - Global Trust Bank</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      color: #005f73;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #005f73;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .form-container textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #005f73;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #004a5c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Complaint Form -->
+  <div class="form-container">
+    <h2>Customer Support - Submit a Complaint</h2>
+    <form id="complaintForm">
+      <label for="complaintType">Complaint Type:</label>
+      <select id="complaintType" name="complaintType" required>
+        <option value="">Select Complaint Type</option>
+        <option value="Account Issues">Account Issues</option>
+        <option value="Loan Issues">Loan Issues</option>
+        <option value="Transaction Issues">Transaction Issues</option>
+        <option value="Technical Issues">Technical Issues</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="complaintDetails">Complaint Details:</label>
+      <textarea id="complaintDetails" name="complaintDetails" placeholder="Describe your complaint..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('complaintForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from submitting
+
+      // Get form values
+      const complaintType = document.getElementById('complaintType').value;
+      const complaintDetails = document.getElementById('complaintDetails').value;
+
+      // Display confirmation message
+      alert(Complaint Submitted Successfully!\n\nComplaint Type: ${complaintType}\nComplaint Details: ${complaintDetails});
+
+      // Reset form
+      document.getElementById('complaintForm').reset();
+    });
+  </script>
+
+</body>
+</html>
