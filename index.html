@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Trust Bank - Online Banking</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background-color: #005f73;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004a5c;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.8)), url('https://via.placeholder.com/1500x500');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .hero button {
+      background-color: #ffcc00;
+      color: #005f73;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #e6b800;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      background-color: white;
+    }
+
+    .feature-card {
+      text-align: center;
+      max-width: 250px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      color: #005f73;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    /* Info Sections */
+    .info-section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slideUp 0.5s ease-in-out;
+    }
+
+    .info-section h2 {
+      color: #005f73;
+      margin-bottom: 20px;
+    }
+
+    .info-section p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .info-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .info-section ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004a5c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: #ffcc00;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <header>
+    <img src="https://via.placeholder.com/150x60?text=Global+Trust+Bank" alt="Bank Logo">
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#login">Login</a>
+    <a href="#signup">Signup</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <div class="hero">
+    <h1>Welcome to Global Trust Bank</h1>
+    <p>Your Trusted Partner in Secure Banking</p>
+    <button>Get Started</button>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <div class="feature-card" onclick="scrollToOnlineBanking()">
+      <img src="https://via.placeholder.com/60" alt="Online Banking">
+      <h3>Online Banking</h3>
+      <p>Manage your accounts and transactions securely online.</p>
+    </div>
+    <div class="feature-card" onclick="scrollToLoanInfo()">
+      <img src="https://via.placeholder.com/60" alt="Loans">
+      <h3>Loans</h3>
+      <p>Get instant loans with competitive interest rates.</p>
+    </div>
+    <div class="feature-card" onclick="scrollToInvestmentsInfo()">
+      <img src="https://via.placeholder.com/60" alt="Investments">
+      <h3>Investments</h3>
+      <p>Grow your wealth with our investment plans.</p>
+    </div>
+  </div>
+
+  <!-- Online Banking Info Section -->
+  <div id="onlineBankingInfo" class="info-section">
+    <h2>Online Banking Services</h2>
+    <p>With Global Trust Bank's Online Banking, you can:</p>
+    <ul>
+      <li>View account balances and transaction history.</li>
+      <li>Transfer funds between accounts or to other banks.</li>
+      <li>Pay bills and manage recurring payments.</li>
+      <li>Set up alerts for account activity.</li>
+      <li>Access your accounts 24/7 from anywhere.</li>
+    </ul>
+    <p>Our online banking platform is secure, easy to use, and designed to make your banking experience seamless.</p>
+  </div>
+
+  <!-- Loan Info Section -->
+  <div id="loanInfo" class="info-section">
+    <h2>Loan Services</h2>
+    <p>Global Trust Bank offers a variety of loan options to meet your needs:</p>
+    <ul>
+      <li><strong>Personal Loans:</strong> For personal expenses, travel, or emergencies.</li>
+      <li><strong>Home Loans:</strong> Affordable home loans with flexible repayment options.</li>
+      <li><strong>Car Loans:</strong> Low-interest loans for new and used cars.</li>
+      <li><strong>Education Loans:</strong> Support for higher education with easy repayment plans.</li>
+      <li><strong>Business Loans:</strong> Loans to grow your business with competitive rates.</li>
+    </ul>
+    <p>Our loan process is quick, transparent, and designed to help you achieve your goals.</p>
+  </div>
+
+  <!-- Investments Info Section -->
+  <div id="investmentsInfo" class="info-section">
+    <h2>Investment Services</h2>
+    <p>Global Trust Bank offers a range of investment options to help you grow your wealth:</p>
+    <ul>
+      <li><strong>Fixed Deposits:</strong> Earn guaranteed returns with fixed interest rates.</li>
+      <li><strong>Mutual Funds:</strong> Invest in professionally managed funds for higher returns.</li>
+      <li><strong>Stocks and Shares:</strong> Trade in the stock market with expert guidance.</li>
+      <li><strong>Retirement Plans:</strong> Secure your future with tailored retirement plans.</li>
+      <li><strong>Gold Investments:</strong> Invest in gold for long-term wealth preservation.</li>
+    </ul>
+    <p>Our investment advisors are here to help you make informed decisions and achieve your financial goals.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="customer-support.html">Customer Support</a>
+    <a href="#terms">Terms & Conditions</a>
+    <a href="#social">Social Media</a>
+    <p>&copy; 2023 Global Trust Bank. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to scroll to Online Banking Info
+    function scrollToOnlineBanking() {
+      const infoSection = document.getElementById('onlineBankingInfo');
+      infoSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+    }
+
+    // JavaScript to scroll to Loan Info
+    function scrollToLoanInfo() {
+      const infoSection = document.getElementById('loanInfo');
+      infoSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+    }
+
+    // JavaScript to scroll to Investments Info
+    function scrollToInvestmentsInfo() {
+      const infoSection = document.getElementById('investmentsInfo');
+      infoSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+    }
+  </script>
+
+</body>
+</html>
